@@ -18,14 +18,14 @@ const Form = () => {
             group
         }
         tg.onSendData(JSON.stringify(data))
-    }, [])
+    }, [firstname, lastname, tel, group])
 
     useEffect(()=> {
         tg.onEvent('mainButtonClicked', onSendData)
         return () => {
             tg.offEvent('mainButtonClicked', onSendData)
         }
-    }, [])
+    }, [onSendData])
 
     useEffect(() => {
         tg.MainButton.setParams({
