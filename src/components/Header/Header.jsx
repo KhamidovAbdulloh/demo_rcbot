@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <div className={'header'}>
             <Button>Yopish</Button>
-            <span className={'username'}> </span>
+            <span className={'username'}> {tg.initDataUnsafe?.user?.username} </span>
 
         </div>
     )
