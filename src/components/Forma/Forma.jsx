@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import './Forma.css';
 import { useTelegram } from '../../hooks/useTelegram';
 
-const Form = () => {
+const Forma = () => {
     const [firstname, setFirstname] = useState('')
     const [lastname, setLastname] = useState('')
     const [tel, setTel] = useState('')

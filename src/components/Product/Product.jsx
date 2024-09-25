@@ -5,7 +5,8 @@ import './Product.css';
 const Product = () => {
     return (
         <div className={'product'}>
-            PRODUCT
+            Video Darsliklar:
+            
             
         </div>
     )
