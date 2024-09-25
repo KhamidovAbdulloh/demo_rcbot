@@ -1,11 +1,29 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Form.css';
+import { useTelegram } from '../../hooks/useTelegram';
 
 const Form = () => {
     const [firstname, setFirstname] = useState('')
     const [lastname, setLastname] = useState('')
     const [tel, setTel] = useState('')
     const [group, setGroup] = useState('group')
+
+    const {tg} = useTelegram()
+
+    useEffect(() => {
+        tg.MainButton.setParams({
+            text: 'Formani jonatish'
+        })
+
+    }, [])
+
+    useEffect(()=> {
+        if(!group) {
+            tg.MainButton.hide()
+        } else {
+            tg.MainButton.show()
+        }
+    }, [group])
 
     const onFirstnameChange = (e) => {
         setFirstname(e.target.value)
