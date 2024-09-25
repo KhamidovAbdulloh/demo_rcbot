@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react'
-import './Forma.css';
+import './Form.css';
 import { useTelegram } from '../../hooks/useTelegram';
 
-const Forma = () => {
+const Form = () => {
     const [firstname, setFirstname] = useState('')
     const [lastname, setLastname] = useState('')
     const [tel, setTel] = useState('')
@@ -72,4 +72,4 @@ const Forma = () => {
     )
 }
 
-export default Forma
+export default Form

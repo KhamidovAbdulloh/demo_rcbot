@@ -3,7 +3,6 @@ import './App.css';
 import { useTelegram } from './hooks/useTelegram';
 import Header from "./components/Header/Header"
 import { Form, Route, Routes } from 'react-router-dom';
-import Forma from "./components/Forma/Forma"
 import Product from "./components/Product/Product"
 
 function App() {
@@ -17,7 +16,7 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path={'form'} element={<Forma />}/>
+        <Route path={'form'} element={<Form />}/>
         <Route index element={<Product/>}/>
       </Routes>
       
